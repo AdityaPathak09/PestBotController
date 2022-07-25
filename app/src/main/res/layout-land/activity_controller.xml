@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controller">
+
+
+    <Button
+        android:id="@+id/captImgButton"
+        android:layout_width="91dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/white"
+        android:text="Capture"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/camAngle"
+        app:layout_constraintEnd_toEndOf="@+id/webView"
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
+
+    <ImageView
+        android:id="@+id/viewforward"
+        android:layout_width="60dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toEndOf="@+id/viewsl"
+        app:layout_constraintTop_toTopOf="@+id/viewsl"
+        app:srcCompat="@drawable/ic_front" />
+
+    <ImageView
+        android:id="@+id/viewsr"
+        android:layout_width="60dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toEndOf="@+id/viewforward"
+        app:layout_constraintTop_toTopOf="@+id/viewforward"
+        app:srcCompat="@drawable/ic_rightfront" />
+
+    <ImageView
+        android:id="@+id/viewright"
+        android:layout_width="60dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toStartOf="@+id/viewsr"
+        app:layout_constraintTop_toBottomOf="@+id/viewsr"
+        app:srcCompat="@drawable/ic_right" />
+
+    <ImageView
+        android:id="@+id/viewleft"
+        android:layout_width="60dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toStartOf="@+id/viewsl"
+        app:layout_constraintTop_toBottomOf="@+id/viewsl"
+        app:srcCompat="@drawable/ic_left" />
+
+    <ImageView
+        android:id="@+id/viewback"
+        android:layout_width="60dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toStartOf="@+id/viewstop"
+        app:layout_constraintTop_toBottomOf="@+id/viewstop"
+        app:srcCompat="@drawable/ic_back" />
+
+    <ImageView
+        android:id="@+id/viewstop"
+        android:layout_width="60dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toStartOf="@+id/viewforward"
+        app:layout_constraintTop_toBottomOf="@+id/viewforward"
+        app:srcCompat="@drawable/ic_stop"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/viewsl"
+        android:layout_width="60dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22"
+        app:srcCompat="@drawable/ic_leftfront"
+        tools:ignore="ImageContrastCheck" />
+
+    <SeekBar
+        android:id="@+id/speedBar"
+        android:layout_width="236dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewforward"
+        app:layout_constraintEnd_toEndOf="@+id/viewsr"
+        app:layout_constraintStart_toStartOf="@+id/viewsl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.534" />
+
+    <Button
+        android:id="@+id/reconnectButton"
+        android:layout_width="105dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/reconnect"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/viewright"
+        app:layout_constraintTop_toBottomOf="@+id/viewright" />
+
+    <Button
+        android:id="@+id/mapButton"
+        android:layout_width="105dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/map"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/reconnectButton"
+        app:layout_constraintTop_toBottomOf="@+id/reconnectButton" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/pump1Button"
+        android:layout_width="92dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="2dp"
+        android:text="@string/pump_1"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/reconnectButton"
+        app:layout_constraintEnd_toEndOf="@+id/viewleft"
+        app:layout_constraintTop_toTopOf="@+id/reconnectButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/pump2Button"
+        android:layout_width="92dp"
+        android:layout_height="48dp"
+
+        android:text="@string/pump_2"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mapButton"
+        app:layout_constraintEnd_toEndOf="@+id/pump1Button"
+        app:layout_constraintTop_toBottomOf="@+id/pump1Button" />
+
+    <SeekBar
+        android:id="@+id/camAngle"
+        android:layout_width="392dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="347dp"
+        android:layout_height="261dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/camAngle"
+        app:layout_constraintStart_toStartOf="@+id/camAngle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/backCentre"
+        android:layout_width="226dp"
+        android:layout_height="17dp"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="@+id/backEdge"
+        app:layout_constraintEnd_toEndOf="@+id/reconnectButton"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toEndOf="@+id/viewsr"
+        app:layout_constraintTop_toTopOf="@+id/backEdge"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/backEdge"
+        android:layout_width="226dp"
+        android:layout_height="17dp"
+        android:rotation="-90"
+        app:layout_constraintBottom_toTopOf="@+id/pump1Button"
+        app:layout_constraintEnd_toStartOf="@+id/viewsl"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintStart_toStartOf="@+id/pump1Button"
+        app:layout_constraintTop_toBottomOf="@+id/speedBar"
+        app:layout_constraintVertical_bias="0.381" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
